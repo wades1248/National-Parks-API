@@ -8,9 +8,10 @@ function formatQuery(params){
 
 function getParks(query, maxResults = 10){
   const params ={
+    stateCode: query, 
     limit: maxResults ||10,
     start: 0,
-    q: query,
+    //q: query,
     api_key: apiKey
     };
   const queryString = formatQuery(params)
